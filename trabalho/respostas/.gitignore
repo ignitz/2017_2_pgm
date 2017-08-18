@@ -128,3 +128,4 @@ desktop.ini
 # ignore target pdf source
 /*.tex
 !/example.tex
+/01.tex
