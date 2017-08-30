@@ -126,6 +126,6 @@ desktop.ini
 .pdfignore
 
 # ignore target pdf source
-/*.tex
-!/example.tex
+# /*.tex
 /01.tex
+share/
