@@ -1,8 +1,22 @@
 \item
+
+% http://www.math.ku.dk/~susanne/kursusstokproc/ConditionalIndependence.pdf
+
+% https://math.stackexchange.com/questions/1866607/help-prove-x-y-are-conditionally-independent-given-z-iff-bbb-px-z-y-f
+
+% https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0ahUKEwjt9Lnhuf_VAhVF3GMKHXO9AssQFgg8MAI&url=http%3A%2F%2Fwww.math.ku.dk%2F~susanne%2Fkursusstokproc%2FConditionalIndependence.pdf&usg=AFQjCNEdXICG55QYoRPMBTDrWLBfyG0U8g
+
+
 \begin{itemize}
   \item $P(X = x, Y = y|Z = z) = P(x|z)P(y|z)$
 
+  \[\begin{array}{l}
+  P(X,Y,Z) = P(X,Y | Z)P(Z)=P(X|Z)P(Y|Z)P(Z) \\
+  \frac{P(X,Z)}{P(Z)} \cdot \frac{P(X,Y)}{P(Z)} \cdot P(Z)
+  \end{array}\]
+
   \item $P(X = x|Y = y,Z = z) = P(X = x|Z = z)$
+
 
   \item $P(Y = y|X = x,Z = z) = P(Y = y|Z = z)$
 
