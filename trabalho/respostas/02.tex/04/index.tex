@@ -1,0 +1,51 @@
+\item
+\begin{itemize}
+  Dado que os eventos de jogar a moeda são independentes e que os eventos de
+  escolher uma das moedas possuem a mesma probabilidade. Temos:
+
+  \item $P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_{10}} = {\rm{Cara}}|{\rm{Moeda}} = A} \right)$
+
+  \[\begin{array}{l}
+  P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_{10}} = {\rm{Cara}}|{\rm{Moeda}} = A} \right) = \\
+   = \prod\nolimits_{i = 1}^{10} {P\left( {{X_i} = {\rm{Cara}}|{\rm{Moeda}} = A} \right)}  = {\left( {0.70} \right)^{10}}
+  \end{array}\]
+
+  \item $P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_{10}} = {\rm{Cara}}|{\rm{Moeda}} = B} \right)$
+
+  \[\begin{array}{l}
+  P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_{10}} = {\rm{Cara}}|{\rm{Moeda}} = B} \right) = \\
+   = \prod\nolimits_{i = 1}^{10} {P\left( {{X_i} = {\rm{Cara}}|{\rm{Moeda}} = B} \right)}  = {\left( {0.10} \right)^{10}}
+  \end{array}\]
+
+  \item $P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_{10}} = {\rm{Cara}}} \right)$
+
+  \[\begin{array}{l}
+  P\left( {{\rm{Cara}}} \right) = P\left( {{\rm{Moeda}} = A} \right)P\left( {{\rm{Cara}}|{\rm{Moeda}} = A} \right) + P\left( {{\rm{Moeda}} = B} \right)P\left( {{\rm{Cara}}|{\rm{Moeda}} = B} \right)\\
+   = 0.7P\underbrace {\left( {{\rm{Moeda}} = A} \right)}_{\frac{1}{2}} + 0.1P\underbrace {\left( {{\rm{Moeda}} = B} \right)}_{\frac{1}{2}} = 0.4\\
+  \\
+  P\left( {{X_1} = {\rm{Cara}}, \ldots ,{X_{10}} = {\rm{Cara}}} \right) = \prod\limits_{i = 1}^{10} {P\left( {{X_i} = {\rm{Cara}}} \right) = {{\left( {0.4} \right)}^{10}}}
+  \end{array}\]
+
+  \item $P\left( {{X_{10}} = {\rm{Cara}}|{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}} \right)$
+
+  \[\begin{array}{l}
+  P({X_{10}} = {\rm{Cara}}|\underbrace {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}}_Y) = P({X_{10}} = {\rm{Cara}}|Y)\\
+   = \frac{{P\left( {{X_{10}} = {\rm{Cara}}} \right)P\left( {Y|{X_{10}} = {\rm{Cara}}} \right)}}{{P\left( Y \right)}} = \frac{{\left( {0.4} \right)P\left( {Y|{X_{10}} = {\rm{Cara}}} \right)}}{{P\left( Y \right)}}\\
+   = 0.4 \cdot \frac{{P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}|{X_{10}} = {\rm{Cara}}} \right)}}{{P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}} \right)}}\\
+   = 0.4 \cdot \frac{{P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}},{X_{10}} = {\rm{Cara}}} \right)}}{{P\left( {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}} \right)}}\\
+   = 0.4\frac{{\prod\limits_{i = 1}^{10} {P\left( {{X_i} = {\rm{Cara}}} \right)} }}{{\prod\limits_{i = 1}^9 {P\left( {{X_i} = {\rm{Cara}}} \right)} }} = 0.4\frac{{{{\left( {0.4} \right)}^{10}}}}{{{{\left( {0.4} \right)}^9}}} = {\left( {0.4} \right)^2}
+  \end{array}\]
+
+
+  \item $P\left( {{X_{10}} = {\rm{Cara}}|{\rm{Moeda}} = A,{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}} \right)$
+
+  % TODO: Continuar
+  \[\begin{array}{l}
+  P({X_{10}} = {\rm{Cara}}|{\rm{Moeda}} = A,\underbrace {{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}}_Y)\\
+   = P\left( {{X_{10}} = {\rm{Cara}}|A,Y} \right) = \frac{{P\left( {{X_{10}} = {\rm{Cara}}|A} \right)P\left( {Y|} \right)}}{{}}
+  \end{array}\]
+
+  \item $P\left( {{X_{10}} = {\rm{Cara}}|{\rm{Moeda}} = B,{X_1} = {\rm{Cara}},{X_2} = {\rm{Cara}}, \ldots ,{X_9} = {\rm{Cara}}} \right)$
+
+
+\end{itemize}
