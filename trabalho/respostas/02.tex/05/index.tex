@@ -1,1 +1,36 @@
 \item
+A princípio, temos:
+  \[{\chi ^2} = \sum\nolimits_{i,j} {\frac{{{{\left( {{N_{ij}} - {E_{ij}}} \right)}^2}}}{{{E_{ij}}}}} \]
+
+e para facilitar a notação
+
+\begin{center}
+  \begin{tabular}{c c c}
+    ${N_{++}} = \sum\nolimits_{i,j} {{N_{ij}}} $
+    &
+    ${{\hat p}_{ + j}} = \sum\nolimits_i {\frac{{{N_{ij}}}}{{{N_{ +  + }}}}} $
+    &
+    ${{\hat p}_{i + }} = \sum\nolimits_j {\frac{{{N_{ij}}}}{{{N_{ +  + }}}}} $
+    \\
+    ${{\hat p}_{ij}} = \frac{{{N_{ij}}}}{{{N_{ +  + }}}}$
+    &
+    ${E_{ij}} = {N_{ +  + }}{{\hat p}_{i + }}{{\hat p}_{ + j}}$
+    &
+    \\
+  \end{tabular}
+\end{center}
+
+\begin{itemize}
+  \item $\displaystyle{\chi ^2} = \sum\nolimits_{i,j} {\frac{{{{\left( {{N_{ij}} - {E_{ij}}} \right)}^2}}}{{{E_{ij}}}}}  = $
+  \\
+  $\displaystyle= \sum\nolimits_{i,j} {\frac{{{{\left( {{N_{ij}} - {N_{ +  + }}{{\hat p}_{i + }}{{\hat p}_{ + j}}} \right)}^2}}}{{{N_{ +  + }}{{\hat p}_{i + }}{{\hat p}_{ + j}}}}}  = \sum\nolimits_{i,j} {\frac{{{{\left( {{N_{ +  + }}\left( {{N_{ij}}/{N_{ +  + }} - {{\hat p}_{i + }}{{\hat p}_{ + j}}} \right)} \right)}^2}}}{{{N_{ +  + }}{{\hat p}_{i + }}{{\hat p}_{ + j}}}}}$
+  \\
+  $\displaystyle= \sum\nolimits_{i,j} {\frac{{{N_{ +  + }}^2}}{{{N_{ +  + }}}} \cdot \frac{{{{\left( {{N_{ij}}/{N_{ +  + }} - {{\hat p}_{i + }}{{\hat p}_{ + j}}} \right)}^2}}}{{{{\hat p}_{i + }}{{\hat p}_{ + j}}}}}  = {N_{ +  + }}\sum\nolimits_{i,j} {\frac{{{{\left( {{{\hat p}_{ij}} - {{\hat p}_{i + }}{{\hat p}_{ + j}}} \right)}^2}}}{{{{\hat p}_{i + }}{{\hat p}_{ + j}}}}}$
+
+  \item $\displaystyle{\chi ^2} = \sum\nolimits_{i,j} {\frac{{{{\left( {{N_{ij}} - {E_{ij}}} \right)}^2}}}{{{E_{ij}}}}}  = $ \\
+  \[\begin{array}{l}
+  \displaystyle = \sum\nolimits_{i,j} {\frac{{{N_{ij}}^2 - 2{N_{ij}}{E_{ij}} + {E_{ij}}^2}}{{{E_{ij}}}}}  = \sum\nolimits_{i,j} {\frac{{{N_{ij}}^2}}{{{E_{ij}}}}}  + \sum\nolimits_{i,j} {\frac{{ - 2{N_{ij}}{E_{ij}}}}{{{E_{ij}}}}}  + \sum\nolimits_{i,j} {\frac{{{E_{ij}}^2}}{{{E_{ij}}}}} \\
+  = \sum\nolimits_{i,j} {\frac{{{N_{ij}}^2}}{{{E_{ij}}}}}  - 2\underbrace {\sum\nolimits_{i,j} {{N_{ij}}} }_{{N_{ +  + }}} + \sum\nolimits_{i,j} {{E_{ij}}}  = \sum\nolimits_{i,j} {\frac{{{N_{ij}}^2}}{{{E_{ij}}}}}  - 2{N_{ +  + }} + \sum\nolimits_{i,j} {{N_{ +  + }}{{\hat p}_{i + }}{{\hat p}_{ + j}}} \\
+  = \sum\nolimits_{i,j} {\frac{{{N_{ij}}^2}}{{{E_{ij}}}}}  - 2{N_{ +  + }} + {N_{ +  + }}\underbrace {\sum\nolimits_{i,j} {{{\hat p}_{i + }}{{\hat p}_{ + j}}} }_1 = \sum\nolimits_{i,j} {\frac{{{N_{ij}}^2}}{{{E_{ij}}}}}  - {N_{ +  + }}
+  \end{array}\]
+\end{itemize}

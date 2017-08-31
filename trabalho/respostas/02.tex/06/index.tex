@@ -1,1 +1,111 @@
-\item
+\item V ou F.
+
+\begin{itemize}
+  \item $\displaystyle P\left( {A \cap B} \right) \le \min \{ P(A),P(B)\} $
+
+  Já que $\left( A \cap B \right) \subset A$:
+
+  \[\begin{array}{l}
+  \displaystyle
+  P\left( {A \cap B} \right) \le P\left( A \right)\\
+  P\left( A \right) \cdot P\left( {B|A} \right) \le P\left( A \right)\\
+  \left[ {{\rm{se}}{\rm{, }}P\left( A \right) > 0} \right]\\
+  \frac{1}{{P\left( A \right)}} \cdot P\left( A \right) \cdot P\left( {B|A} \right) \le \frac{1}{{P\left( A \right)}} \cdot P\left( A \right)\\
+  P\left( {B|A} \right) \le 1
+  \end{array}\]
+
+  O que é verdade pois toda probabilidade é menor que $1$.
+
+  Análogo para $\left( A \cap B \right) \subset B$:
+
+  \[\begin{array}{l}
+  P\left( {A \cap B} \right) \le P\left( B \right)\\
+  P\left( B \right) \cdot P\left( {A|B} \right) \le P\left( B \right)\\
+  \left[ {{\rm{se}}{\rm{, }}P\left( B \right) > 0} \right]\\
+  \frac{1}{{P\left( B \right)}} \cdot P\left( B \right) \cdot P\left( {A|B} \right) \le \frac{1}{{P\left( B \right)}} \cdot P\left( B \right)\\
+  P\left( {A|B} \right) \le 1
+  \end{array}\]
+
+  Como é verdade para os dois, será verdade também para o mínimo dos dois.
+
+  \item $\displaystyle P\left( {A|C} \right) = \sum\limits_{i = 1}^k {P\left( {A|C,{B_i}} \right)P\left( {{B_i}|C} \right)} $
+
+  Lembrando que $A \subset B$ e todas as operações são válidas pelas hipóteses dada.
+
+  \[\begin{array}{l}
+  \displaystyle
+  P\left( {A|C} \right) = P\left( {A \cap B|C} \right) = P\left( {A \cap \left( {\bigcup\limits_{i = 1}^k {{B_i}} } \right)|C} \right)\\
+  = P\left( {\bigcup\limits_{i = 1}^k {\left( {A \cap {B_i}} \right)} |C} \right) = \sum\limits_{i = 1}^k {P\left( {A \cap {B_i}|C} \right)} \\
+  = \sum\limits_{i = 1}^k {P\left( {{B_i}|C} \right)P\left( {A|C,{B_i}} \right)}  = \sum\limits_{i = 1}^k {P\left( {A|C,{B_i}} \right)P\left( {{B_i}|C} \right)}
+  \end{array}\]
+
+  \item $P\left( {A \cap B} \right) + P\left( {{A^c} \cap B} \right) = 1$
+
+  Sabemos que:
+  \[\begin{array}{l}
+  \displaystyle
+  \left( {A \cap B} \right) \cap \left( {{A^c} \cap B} \right) = A \cap {A^c} \cap B \cap B = \emptyset  \cap B = \emptyset \\
+  \left( {A \cap B} \right) \cup \left( {{A^c} \cap B} \right) = B \cap \left( {A \cup {A^c}} \right) = B
+  \end{array}\]
+
+  Temos:
+
+  \[\begin{array}{l}
+  \displaystyle
+  P\left( {A \cap B} \right) + P\left( {{A^c} \cap B} \right) - 0 = P\left( {A \cap B} \right) + P\left( {{A^c} \cap B} \right) - P\left( \emptyset  \right)\\
+   = \underbrace {P\left( {A \cap B} \right) + P\left( {{A^c} \cap B} \right) - P\left( {\left( {A \cap B} \right) \cap \left( {{A^c} \cap B} \right)} \right)}_{P\left( {\left( {A \cap B} \right) \cup \left( {{A^c} \cap B} \right)} \right)} \\
+   = P\left( {\left( {A \cap B} \right) \cup \left( {{A^c} \cap B} \right)} \right) = P\left( B \right)
+  \end{array}\]
+
+  Logo, não é sempre verdade que $P(B) = 1$.
+
+  \item $P\left( {A|B} \right) + P\left( {{A^c}|B} \right) = 1$
+
+  Utilizando um dos resultados no exercício anterior, temos:
+
+  \[\begin{array}{l}
+  \displaystyle
+  P\left( {A|B} \right) + P\left( {{A^c}|B} \right) = \frac{{P\left( {A \cap B} \right)}}{{P\left( B \right)}} + \frac{{P\left( {{A^c} \cap B} \right)}}{{P\left( B \right)}}\\
+   = \frac{{P\left( {A \cap B} \right) + P\left( {{A^c} \cap B} \right)}}{{P\left( B \right)}} = \frac{{P\left( B \right)}}{{P\left( B \right)}} = 1
+  \end{array}\]
+
+  \item $P\left( {A|B} \right) + P\left( {A|B{^c}} \right) = 1$
+
+  Se $A$ e $B$ forem independemte, $A$ e $B^c$, também será.
+
+  Utilizando a hipótese que $A$ e $B$ são independentes.
+
+  \[P\left( {A|B} \right) + P\left( {A|{B^c}} \right) = P\left( A \right) + P\left( A \right) = 2P\left( A \right)\]
+
+  Será igual a um apenas se $\displaystyle P(A) = \frac{1}{2}$. Como pode pertencer
+  a $0 \le P\left( A \right) \le 1$, logo é falso para $\displaystyle P(A) \ne \frac{1}{2}$.
+
+  \item $P\left( {A \cap B} \right) + P\left( {{A^c} \cap B} \right) = P\left( B \right)$
+
+  \[\left( {A \cap B} \right) \cup \left( {{A^c} \cap B} \right) = \left( {A \cup {A^c}} \right) \cap B = B\]
+
+  Como os conjuntos são disjuntos, temos:
+
+  \[P\left( B \right) = P\left( {\left( {A \cap B} \right) \cup \left( {{A^c} \cap B} \right)} \right) = P\left( {A \cap B} \right) + P\left( {{A^c} \cap B} \right)\]
+
+  \item $P\left( {A|B} \right) > P\left( A \right) \Rightarrow P\left( {{A^c}|B} \right) < P\left( {{A^c}} \right)$
+
+  \[\begin{array}{l}
+  P\left( {A|B} \right) > P\left( A \right)\\
+  1 - P\left( {{A^c}|B} \right) > 1 - P\left( {{A^c}} \right)\\
+   - P\left( {{A^c}|B} \right) >  - P\left( {{A^c}} \right)\\
+  P\left( {{A^c}|B} \right) < P\left( {{A^c}} \right)
+  \end{array}\]
+
+  \item $\displaystyle P\left( {A|B} \right) > P\left( {{A^c}|B} \right) \Rightarrow P\left( {A|B} \right) > \frac{1}{2}$
+
+  \[\begin{array}{l}
+  \displaystyle
+  P\left( {A|B} \right) > P\left( {{A^c}|B} \right)\\
+  P\left( {A|B} \right) > 1 - P\left( {A|B} \right)\\
+  P\left( {A|B} \right) + \left( {P\left( {A|B} \right)} \right) > 1 - P\left( {A|B} \right) + \left( {P\left( {A|B} \right)} \right)\\
+  2P\left( {A|B} \right) > 1\\
+  P\left( {A|B} \right) > \frac{1}{2}
+  \end{array}\]
+
+\end{itemize}
