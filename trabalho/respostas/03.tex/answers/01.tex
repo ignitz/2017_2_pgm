@@ -1,0 +1,265 @@
+BN é uma distribuição válida se:
+
+$\forall P(X=x_i) \ge 0$ se $x_i$ é qualquer um das variáveis aleatórias $\{D, I, S, G, L\}$ e $\sum P = 1$.
+
+\[\displaystyle \sum_{D, I, G, S, L} P(D, I, G, S, L)\]
+
+Pela modelagem da rede bayesiana para as probabilidades condicionais e utilizando a regra da cadeia, temos:
+
+\[\begin{array}{l}
+    \displaystyle \sum_{D, I, G, S, L} P(D, I, G, S, L) \\
+    \displaystyle = \sum_{D, I, G, S, L} P(D)P(I)P(G|I,D)P(S|I)P(L|G)
+\end{array}\]
+
+Calculando a probabilidade individualmente e utilizando abuso de notação pra simplificar:
+
+$\begin{array}{l}
+    P(D = d^0, I = i^0, G = g^1, S = s^0, L = l^0) \\
+    = P(d^0) P(i^0) P(g^1 | i^0, d^0) P(s^0 | i^0) P(l^0 | g^1) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.95 \cdot 0.1 = 0.01197
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^1, s^0, l^1) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.95 \cdot 0.9 = 0.10773
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^1, s^1, l^0) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.05 \cdot 0.1 = 0.00063
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^1, s^1, l^1) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.05 \cdot 0.9 = 0.00567
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^2, s^0, l^0) \\
+    = 0.6 \cdot 0.7 \cdot 0.4 \cdot 0.95 \cdot 0.4 = 0.06384
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^2, s^0, l^1) \\
+    = 0.6 \cdot 0.7 \cdot 0.4 \cdot 0.95 \cdot 0.6 = 0.09576
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^2, s^1, l^0) \\
+    = 0.6 \cdot 0.7 \cdot 0.4 \cdot 0.05 \cdot 0.4 = 0.00336
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^2, s^1, l^1) \\
+    = 0.6 \cdot 0.7 \cdot 0.4 \cdot 0.05 \cdot 0.6 = 0.00504
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^3, s^0, l^0) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.95 \cdot 0.99 = 0.118503
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^3, s^0, l^1) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.95 \cdot 0.01 = 0.001197
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^3, s^1, l^0) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.05 \cdot 0.99 = 0.006237
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^0, g^3, s^1, l^1) \\
+    = 0.6 \cdot 0.7 \cdot 0.3 \cdot 0.05 \cdot 0.01 = 0.000063
+\end{array}$
+
+% i = 1
+
+$\begin{array}{l}
+    P(d^0, i^1, g^1, s^0, l^0) \\
+    = 0.6 \cdot 0.3 \cdot 0.9 \cdot 0.2 \cdot 0.1 = 0.00324
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^1, s^0, l^1) \\
+    = 0.6 \cdot 0.3 \cdot 0.9 \cdot 0.2 \cdot 0.9 = 0.02916
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^1, s^1, l^0) \\
+    = 0.6 \cdot 0.3 \cdot 0.9 \cdot 0.8 \cdot 0.1 = 0.01296
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^1, s^1, l^1) \\
+    = 0.6 \cdot 0.3 \cdot 0.9 \cdot 0.8 \cdot 0.9 = 0.11664
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^2, s^0, l^0) \\
+    = 0.6 \cdot 0.3 \cdot 0.08 \cdot 0.2 \cdot 0.4 = 0.001152
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^2, s^0, l^1) \\
+    = 0.6 \cdot 0.3 \cdot 0.08 \cdot 0.2 \cdot 0.6 = 0.001728
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^2, s^1, l^0) \\
+    = 0.6 \cdot 0.3 \cdot 0.08 \cdot 0.8 \cdot 0.4 = 0.004608
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^2, s^1, l^1) \\
+    = 0.6 \cdot 0.3 \cdot 0.08 \cdot 0.8 \cdot 0.6 = 0.006912
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^3, s^0, l^0) \\
+    = 0.6 \cdot 0.3 \cdot 0.02 \cdot 0.2 \cdot 0.99 = 0.0007128
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^3, s^0, l^1) \\
+    = 0.6 \cdot 0.3 \cdot 0.02 \cdot 0.2 \cdot 0.01 = 0.0000072
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^3, s^1, l^0) \\
+    = 0.6 \cdot 0.3 \cdot 0.02 \cdot 0.8 \cdot 0.99 = 0.0028512
+\end{array}$
+
+$\begin{array}{l}
+    P(d^0, i^1, g^3, s^1, l^1) \\
+    = 0.6 \cdot 0.3 \cdot 0.02 \cdot 0.8 \cdot 0.01 = 0.0000288
+\end{array}$
+
+% d = 1
+
+$\begin{array}{l}
+    P(d^1, i^0, g^1, s^0, l^0) \\
+    = 0.4 \cdot 0.7 \cdot 0.05 \cdot 0.95 \cdot 0.1 = 0.00133
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^1, s^0, l^1) \\
+    = 0.4 \cdot 0.7 \cdot 0.05 \cdot 0.95 \cdot 0.9 = 0.01197
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^1, s^1, l^0) \\
+    = 0.4 \cdot 0.7 \cdot 0.05 \cdot 0.05 \cdot 0.1 = 0.00007
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^1, s^1, l^1) \\
+    = 0.4 \cdot 0.7 \cdot 0.05 \cdot 0.05 \cdot 0.9 = 0.00063
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^2, s^0, l^0) \\
+    = 0.4 \cdot 0.7 \cdot 0.25 \cdot 0.95 \cdot 0.4 = 0.0266
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^2, s^0, l^1) \\
+    = 0.4 \cdot 0.7 \cdot 0.25 \cdot 0.95 \cdot 0.6 = 0.0399
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^2, s^1, l^0) \\
+    = 0.4 \cdot 0.7 \cdot 0.25 \cdot 0.05 \cdot 0.4 = 0.0014
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^2, s^1, l^1) \\
+    = 0.4 \cdot 0.7 \cdot 0.25 \cdot 0.05 \cdot 0.6 = 0.0021
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^3, s^0, l^0) \\
+    = 0.4 \cdot 0.7 \cdot 0.7 \cdot 0.95 \cdot 0.99 = 0.184338
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^3, s^0, l^1) \\
+    = 0.4 \cdot 0.7 \cdot 0.7 \cdot 0.95 \cdot 0.01 = 0.001862
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^3, s^1, l^0) \\
+    = 0.4 \cdot 0.7 \cdot 0.7 \cdot 0.05 \cdot 0.99 = 0.009702
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^0, g^3, s^1, l^1) \\
+    = 0.4 \cdot 0.7 \cdot 0.7 \cdot 0.05 \cdot 0.01 = 0.000098
+\end{array}$
+
+% d e i = 1
+
+$\begin{array}{l}
+    P(d^1, i^1, g^1, s^0, l^0) \\
+    = 0.4 \cdot 0.3 \cdot 0.5 \cdot 0.2 \cdot 0.1 = 0.0012
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^1, s^0, l^1) \\
+    = 0.4 \cdot 0.3 \cdot 0.5 \cdot 0.2 \cdot 0.9 = 0.0108
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^1, s^1, l^0) \\
+    = 0.4 \cdot 0.3 \cdot 0.5 \cdot 0.8 \cdot 0.1 = 0.0048
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^1, s^1, l^1) \\
+    = 0.4 \cdot 0.3 \cdot 0.5 \cdot 0.8 \cdot 0.9 = 0.0432
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^2, s^0, l^0) \\
+    = 0.4 \cdot 0.3 \cdot 0.3 \cdot 0.2 \cdot 0.4 = 0.00288
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^2, s^0, l^1) \\
+    = 0.4 \cdot 0.3 \cdot 0.3 \cdot 0.2 \cdot 0.6 = 0.00432
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^2, s^1, l^0) \\
+    = 0.4 \cdot 0.3 \cdot 0.3 \cdot 0.8 \cdot 0.4 = 0.01152
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^2, s^1, l^1) \\
+    = 0.4 \cdot 0.3 \cdot 0.3 \cdot 0.8 \cdot 0.6 = 0.01728
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^3, s^0, l^0) \\
+    = 0.4 \cdot 0.3 \cdot 0.2 \cdot 0.2 \cdot 0.99 = 0.004752
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^3, s^0, l^1) \\
+    = 0.4 \cdot 0.3 \cdot 0.2 \cdot 0.2 \cdot 0.01 = 0.000048
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^3, s^1, l^0) \\
+    = 0.4 \cdot 0.3 \cdot 0.2 \cdot 0.8 \cdot 0.99 = 0.019008
+\end{array}$
+
+$\begin{array}{l}
+    P(d^1, i^1, g^3, s^1, l^1) \\
+    = 0.4 \cdot 0.3 \cdot 0.2 \cdot 0.8 \cdot 0.01 = 0.000192
+\end{array}$
+
+Calculando a soma de tudo:
+
+\[\sum P(D,I,G,S,L) = 0.42 + 0.18 + 0.28 + 0.12 = 1\]

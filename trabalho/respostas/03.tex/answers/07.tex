@@ -1,0 +1,30 @@
+\begin{itemize}
+    \item $D \bot L$ (F)
+    \item $I \bot L$ (F)
+    \item $S \bot L$ (V)
+    \item $S \bot G$ (V)
+    \item $D \bot S$ (V)
+\end{itemize}
+
+Aqui utilizamos o teorema \textit{d-separation}, para detectar se a trilha é bloqueada pela condição.
+Lembrando que existem as regras do head-tail, tail-tail, head-head (este com condição especial $v \notin C$ and no desc in $C$).
+
+\begin{itemize}
+    \item $D \bot L | I$ (F)
+    \item $I \bot L | S$ (F)
+    \item $I \bot L | G$ (V) head-tail
+    \item $S \bot L | I$ (V) tail-tail
+    \item $I \bot D | G$ (F)
+    \item $I \bot D | L$ (F)
+    \item $S \bot G | L$ (F)
+    \item $D \bot S | L$ (F)
+\end{itemize}
+
+\begin{itemize}
+    \item $D \bot L | I, S$ (F)
+    \item $I \bot L | G, S$ (V) head-tail
+    \item $S \bot L | I, G$ (V) tail-tail
+    \item $I \bot D | L, S$ (F)
+    \item $S \bot G | L, D$ (F)
+    \item $D \bot S | L, I$ (V) tail-tail
+\end{itemize}
